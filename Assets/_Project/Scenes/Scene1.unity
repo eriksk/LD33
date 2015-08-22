@@ -260,6 +260,52 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 419248, guid: 05eca16efc5c0284885893f7b94274fc, type: 2}
   m_PrefabInternal: {fileID: 7968734}
+--- !u!1001 &19803356
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1906040640}
+    m_Modifications:
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 11.1730003
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.10599995
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_RootOrder
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 122734, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_Name
+      value: coffee_mug (18)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &34227335
 Prefab:
   m_ObjectHideFlags: 0
@@ -825,6 +871,52 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!1001 &88812737
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1906040640}
+    m_Modifications:
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 11.1730003
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.39300001
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_RootOrder
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 122734, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_Name
+      value: coffee_mug (16)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &92609035
 Prefab:
   m_ObjectHideFlags: 0
@@ -2780,6 +2872,52 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 448474, guid: 2c3f1d3aa6bb1b3419f0a89a46a3540b, type: 2}
   m_PrefabInternal: {fileID: 319831669}
+--- !u!1001 &323541062
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1906040640}
+    m_Modifications:
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 11.1730003
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .915000021
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_RootOrder
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 122734, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_Name
+      value: coffee_mug (14)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &324021418
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,6 +3692,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!4 &460823037 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_PrefabInternal: {fileID: 323541062}
 --- !u!1001 &472398096
 Prefab:
   m_ObjectHideFlags: 0
@@ -4789,6 +4931,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!4 &605023336 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_PrefabInternal: {fileID: 1402386801}
 --- !u!1 &607910562
 GameObject:
   m_ObjectHideFlags: 0
@@ -4871,6 +5017,52 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!1001 &615194091
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1906040640}
+    m_Modifications:
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 11.1730003
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.65700006
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_RootOrder
+      value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 122734, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_Name
+      value: coffee_mug (20)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &620621255
 Prefab:
   m_ObjectHideFlags: 0
@@ -5924,6 +6116,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 448474, guid: 2c3f1d3aa6bb1b3419f0a89a46a3540b, type: 2}
   m_PrefabInternal: {fileID: 796812270}
+--- !u!4 &800622169 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_PrefabInternal: {fileID: 2045977169}
 --- !u!1001 &800914080
 Prefab:
   m_ObjectHideFlags: 0
@@ -8601,6 +8797,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!4 &1180425177 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_PrefabInternal: {fileID: 19803356}
 --- !u!1001 &1196882038
 Prefab:
   m_ObjectHideFlags: 0
@@ -9621,6 +9821,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!4 &1311306392 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_PrefabInternal: {fileID: 615194091}
 --- !u!1001 &1311354523
 Prefab:
   m_ObjectHideFlags: 0
@@ -9840,6 +10044,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!4 &1341011193 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_PrefabInternal: {fileID: 1676693544}
 --- !u!1001 &1351210837
 Prefab:
   m_ObjectHideFlags: 0
@@ -10018,6 +10226,52 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 448474, guid: 2c3f1d3aa6bb1b3419f0a89a46a3540b, type: 2}
   m_PrefabInternal: {fileID: 1397494861}
+--- !u!1001 &1402386801
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1906040640}
+    m_Modifications:
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 11.1730003
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.39499998
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_RootOrder
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 122734, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_Name
+      value: coffee_mug (19)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1402792296
 GameObject:
   m_ObjectHideFlags: 0
@@ -10647,11 +10901,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 11.1700001
+      value: 11.1730003
       objectReference: {fileID: 0}
     - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .870000005
+      value: .73299998
       objectReference: {fileID: 0}
     - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
       propertyPath: m_LocalPosition.z
@@ -11758,6 +12012,52 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!1001 &1676693544
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1906040640}
+    m_Modifications:
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 11.1730003
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.13699996
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_RootOrder
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 122734, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_Name
+      value: coffee_mug (15)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1682920396
 GameObject:
   m_ObjectHideFlags: 0
@@ -13428,6 +13728,13 @@ Transform:
   - {fileID: 1767963160}
   - {fileID: 620621256}
   - {fileID: 875822901}
+  - {fileID: 460823037}
+  - {fileID: 1341011193}
+  - {fileID: 1934197205}
+  - {fileID: 800622169}
+  - {fileID: 1180425177}
+  - {fileID: 605023336}
+  - {fileID: 1311306392}
   m_Father: {fileID: 1414239222}
   m_RootOrder: 5
 --- !u!1 &1906069240
@@ -13696,6 +14003,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
   m_PrefabInternal: {fileID: 1930462280}
+--- !u!4 &1934197205 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_PrefabInternal: {fileID: 88812737}
 --- !u!1 &1935763820
 GameObject:
   m_ObjectHideFlags: 0
@@ -14375,6 +14686,52 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!1001 &2045977169
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1906040640}
+    m_Modifications:
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 11.1730003
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.75600004
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_RootOrder
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 122734, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_Name
+      value: coffee_mug (17)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2050031099
 GameObject:
   m_ObjectHideFlags: 0
