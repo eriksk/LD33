@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: a514d8924f84a6043b6bd32c382e1018
-timeCreated: 1440228749
+guid: 422579348475a3340b9dc64aa3118172
+timeCreated: 1440234404
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -17,7 +17,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 1
     externalNormalMap: 1
-    heightScale: .159999996
+    heightScale: 0
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
