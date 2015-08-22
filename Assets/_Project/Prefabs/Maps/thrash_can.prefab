@@ -11,6 +11,8 @@ GameObject:
   - 212: {fileID: 21220564}
   - 50: {fileID: 5044258}
   - 61: {fileID: 6195420}
+  - 114: {fileID: 11471998}
+  - 114: {fileID: 11423408}
   m_Layer: 0
   m_Name: thrash_can
   m_TagString: Untagged
@@ -25,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.2399998, y: .665000021, z: 0}
+  m_LocalPosition: {x: 12.9499998, y: .550000012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,6 +61,32 @@ BoxCollider2D:
   m_Offset: {x: -.017747879, y: -.26656723}
   serializedVersion: 2
   m_Size: {x: .281178296, y: .409410268}
+--- !u!114 &11423408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e8554e659c6484b9b1b10367b21da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDestroyEffectPrefab: {fileID: 109594, guid: 04f4dbd276ac2f54da52dc7a5dc17fa9,
+    type: 2}
+  DestroyDelay: .300000012
+--- !u!114 &11471998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bfb6d17f65148544945fc38ee54b689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Initial: 1
 --- !u!212 &21220564
 SpriteRenderer:
   m_ObjectHideFlags: 1

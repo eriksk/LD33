@@ -2,43 +2,41 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-//using Assets._Project.Scripts.Bullets;
 using UnityEngine;
 
 namespace Assets._Project.Scripts.Characters
 {
-    // TODO: All required types here :D
     [RequireComponent(typeof(Health))]
     public class CharacterDefinition : MonoBehaviour
     {
         public GameObject BulletHitEffectPrefab;
         public GameObject OnDeathEffectPrefab;
 
-        // TODO: default properties for character, capabilities etc, button for configuring it?
-
-        void OnTriggerEnter2D(Collider2D coll)
+        void Start()
         {
-            //var bullet = coll.gameObject.GetComponent<Bullet>();
-            //if (bullet != null)
-            //    GetComponent<Health>().Deal(bullet.Damage);
+            GetComponent<Health>().OnDeath += OnDeath;
+        }
 
-            if (BulletHitEffectPrefab != null)
-                Instantiate(BulletHitEffectPrefab, transform.position, transform.rotation);
-
+        private void OnDeath(GameObject obj)
+        {
             CheckDeath();
         }
 
-        void OnCollision2D(Collision2D coll)
-        {
-            //var bullet = coll.gameObject.GetComponent<Bullet>();
-            //if (bullet != null)
-            //    GetComponent<Health>().Deal(bullet.Damage);
+        //void OnTriggerEnter2D(Collider2D coll)
+        //{
+        //    //if (BulletHitEffectPrefab != null)
+        //    //    Instantiate(BulletHitEffectPrefab, transform.position, transform.rotation);
 
-            if (BulletHitEffectPrefab != null)
-                Instantiate(BulletHitEffectPrefab, coll.contacts[0].point, transform.rotation);
+        //    //CheckDeath();
+        //}
 
-            CheckDeath();
-        }
+        //void OnCollision2D(Collision2D coll)
+        //{
+        //    //if (BulletHitEffectPrefab != null)
+        //    //    Instantiate(BulletHitEffectPrefab, coll.contacts[0].point, transform.rotation);
+
+        //    //CheckDeath();
+        //}
 
         private void CheckDeath()
         {

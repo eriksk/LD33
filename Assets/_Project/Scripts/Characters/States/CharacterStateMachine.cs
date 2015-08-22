@@ -14,15 +14,11 @@ namespace Assets._Project.Scripts.Characters.States
     {
         private CharacterState[] _states;
         private CharacterState _current;
+        public CharacterStateMachineType Type = CharacterStateMachineType.Player;
 
         void Start()
         {
-            _states = new CharacterState[]
-            {
-                new Impl.Player.Idle(),
-                new Impl.Player.Walk(), 
-                new Impl.Player.Jump()
-            };
+            _states = CharacterStateMachineFactory.Create(Type);
 
             foreach (var characterState in _states)
                 characterState.Machine = this;

@@ -15,6 +15,8 @@ namespace Assets._Project.Scripts.Weapons
         public float Force = 2f;
         public float RecoilForce = 0.5f;
 
+        public AudioClip FireSound;
+
         public float Interval = 100f;
         private float _current;
 
@@ -31,11 +33,23 @@ namespace Assets._Project.Scripts.Weapons
 
         private void FireBullet(float angle)
         {
+            if (FireSound != null)
+            {
+                var audio = GetComponent<AudioSource>();
+                if (audio == null)
+                {
+                    Debug.Log("No audio source for object " + gameObject.name);
+                }
+                else
+                {
+                    audio.PlayOneShot(FireSound);
+                }
+            }
+
             var pos = transform.position;
             pos.x += MuzzleOffset.x * transform.localScale.x * GetComponent<CharacterFlip>().FlippedAsUnit;
             pos.y += MuzzleOffset.y * transform.localScale.y;
-
-
+            
             var bullet = (GameObject)Instantiate(BulletPrefab, pos, Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg));
             var rigidBody = bullet.GetComponent<Rigidbody2D>();
             rigidBody.velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * Force;

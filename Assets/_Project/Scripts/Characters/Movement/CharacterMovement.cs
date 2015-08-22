@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,15 +19,24 @@ namespace Assets._Project.Scripts.Characters.Movement
 
         private Rigidbody2D _rigidbody;
         private CharacterSurroundings _surroundings;
+        private float _linearDrag;
+
+        private bool _disabled;
 
         void Start()
         {
+            _disabled = false;
             _rigidbody = GetComponent<Rigidbody2D>();
             _surroundings = GetComponent<CharacterSurroundings>();
+            _linearDrag = _rigidbody.drag;
+            _rigidbody.drag = 0f;
         }
 
         void FixedUpdate()
         {
+            if (_disabled)
+                return;
+
             var velocity = _rigidbody.velocity;
 
             if (velocity.x > 0f)
@@ -47,6 +57,9 @@ namespace Assets._Project.Scripts.Characters.Movement
 
         public void MoveLeft()
         {
+            if (_disabled)
+                return;
+
             if (_surroundings.Left)
                 return;
 
@@ -61,6 +74,9 @@ namespace Assets._Project.Scripts.Characters.Movement
 
         public void MoveRight()
         {
+            if (_disabled)
+                return;
+
             if (_surroundings.Right)
                 return;
 
@@ -74,6 +90,9 @@ namespace Assets._Project.Scripts.Characters.Movement
 
         public void Stop()
         {
+            if (_disabled)
+                return;
+
             var vel = _rigidbody.velocity;
             vel.x = 0f;
             _rigidbody.velocity = vel;
@@ -81,17 +100,37 @@ namespace Assets._Project.Scripts.Characters.Movement
 
         public void Jump()
         {
+            if (_disabled)
+                return;
+
             var vel = _rigidbody.velocity;
             vel.y = JumpForce;
             _rigidbody.velocity = vel;
         }
+        
+        public void DisableForSeconds(float seconds)
+        {
+            StartCoroutine(Disable(seconds));
+        }
 
-        //public void StopYIfMovingUpwards()
-        //{
-        //    var vel = _rigidbody.velocity;
-        //    if (vel.y > 0f)
-        //        vel.y = 0f;
-        //    _rigidbody.velocity = vel;
-        //}
+        private IEnumerator Disable(float seconds)
+        {
+            if (_rigidbody != null)
+            {
+                _rigidbody.drag = _linearDrag;
+                _disabled = true;
+                yield return new WaitForSeconds(0.1f);
+                int maxTries = (int) (seconds*1000);
+                int tries = 0;
+                // allow enable if grounded again
+                while (!_surroundings.Down || tries >= maxTries)
+                {
+                    tries++;
+                    yield return new WaitForEndOfFrame();
+                }
+                _disabled = false;
+                _rigidbody.drag = 0f;
+            }
+        }
     }
 }

@@ -11,6 +11,9 @@ namespace Assets._Project.Scripts.Characters
         public int Initial = 100;
         private int _health;
 
+        public delegate void Death(GameObject gameObject);
+        public event Death OnDeath;
+
         void Start()
         {
             _health = Initial;
@@ -43,6 +46,9 @@ namespace Assets._Project.Scripts.Characters
         {
             _health -= damage;
             Clamp();
+
+            if (Dead && OnDeath != null)
+                OnDeath(gameObject);
         }
 
         public void Heal(int amount)

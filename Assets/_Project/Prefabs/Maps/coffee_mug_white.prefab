@@ -11,6 +11,8 @@ GameObject:
   - 212: {fileID: 21212120}
   - 61: {fileID: 6167422}
   - 50: {fileID: 5027542}
+  - 114: {fileID: 11424146}
+  - 114: {fileID: 11420248}
   m_Layer: 0
   m_Name: coffee_mug_white
   m_TagString: Untagged
@@ -25,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.6229992, y: 1.48500001, z: 0}
+  m_LocalPosition: {x: 26.066, y: 2.227, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,6 +61,30 @@ BoxCollider2D:
   m_Offset: {x: -.0299999993, y: -.0799999982}
   serializedVersion: 2
   m_Size: {x: .129999995, y: .159999996}
+--- !u!114 &11420248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e8554e659c6484b9b1b10367b21da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDestroyEffectPrefab: {fileID: 0}
+--- !u!114 &11424146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bfb6d17f65148544945fc38ee54b689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Initial: 1
 --- !u!212 &21212120
 SpriteRenderer:
   m_ObjectHideFlags: 1
