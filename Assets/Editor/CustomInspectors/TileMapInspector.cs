@@ -34,34 +34,47 @@ namespace Assets.Editor.CustomInspectors
                 _editing = !_editing;
             }
 
-            if (GUILayout.Button("Clear Data"))
+            if (_editing)
             {
-                if (EditorUtility.DisplayDialog("Are you sure?", "Are you sure?", "Yes", "Omg no!"))
+                if (GUILayout.Button("Select Empty Cell"))
                 {
-                    tilemap.SetAllCells(-1);
-                    tilemap.GenerateMesh();
+                    _selectedStampCell = -1;
                 }
             }
 
-            if (GUILayout.Button("Randomize Data"))
+            if (!_editing)
             {
-                if (EditorUtility.DisplayDialog("Are you sure?", "Are you sure?", "Yes", "Omg no!"))
+
+                if (GUILayout.Button("Clear Data"))
                 {
-                    tilemap.RandomizeData();
+                    if (EditorUtility.DisplayDialog("Are you sure?", "Are you sure?", "Yes", "Omg no!"))
+                    {
+                        tilemap.SetAllCells(-1);
+                        tilemap.GenerateMesh();
+                    }
+                }
+
+                if (GUILayout.Button("Randomize Data"))
+                {
+                    if (EditorUtility.DisplayDialog("Are you sure?", "Are you sure?", "Yes", "Omg no!"))
+                    {
+                        tilemap.RandomizeData();
+                        tilemap.GenerateMesh();
+                    }
+                }
+
+                if (GUILayout.Button("Generate Mesh"))
+                {
                     tilemap.GenerateMesh();
                 }
-            }
-
-            if (GUILayout.Button("Generate Mesh"))
-            {
-                tilemap.GenerateMesh();
-            }
 
 
-            if (GUILayout.Button("Generate Colliders"))
-            {
-                new TileMapColliderGenerator(tilemap, new SpriteSheet(tilemap.GetComponent<MeshRenderer>().sharedMaterial, tilemap.SpriteSheetCellSize))
-                    .GenerateColliders();
+                if (GUILayout.Button("Generate Colliders"))
+                {
+                    new TileMapColliderGenerator(tilemap,
+                        new SpriteSheet(tilemap.GetComponent<MeshRenderer>().sharedMaterial, tilemap.SpriteSheetCellSize))
+                        .GenerateColliders();
+                }
             }
 
 
@@ -91,39 +104,46 @@ namespace Assets.Editor.CustomInspectors
 
             bool isInSourceSelectTexture = sourceTextureRect.Contains(screenPoint);
 
-
             if (Event.current.type == EventType.mouseDown)
             {
                 if (Event.current.button == 1) // right click
                 {
-                    var mouseCell = Cell.Convert(screenPoint, sourceTexCellSize);
-                    if (mouseCell.Col > -1 && mouseCell.Col < sheet.Columns && mouseCell.Row > -1 && mouseCell.Row < sheet.Rows)
+                    if (isInSourceSelectTexture)
                     {
-                        var newIndex = sheet.GetIndexFromCell(mouseCell);
-                        _selectedStampCell = newIndex;
-                    }
-                    else if (mouseCell.Row == -1 && mouseCell.Col == 0)
-                    {
-                        _selectedStampCell = -1;
+                        var mouseCell = Cell.Convert(screenPoint, sourceTexCellSize);
+                        if (mouseCell.Col > -1 && mouseCell.Col < sheet.Columns && mouseCell.Row > -1 &&
+                            mouseCell.Row < sheet.Rows)
+                        {
+                            var newIndex = sheet.GetIndexFromCell(mouseCell);
+                            _selectedStampCell = newIndex;
+                        }
+                        else if (mouseCell.Row == -1 && mouseCell.Col == 0)
+                        {
+                            _selectedStampCell = -1;
+                        }
                     }
                     else
                     {
                         // TODO: dont do this here if we actually are using the toolbox
                         TryCloneCellType(tilemap, cellPoint);
                     }
-
-                    Debug.Log("click: " + mouseCell);
                 }
                 if (Event.current.button == 0)
                 {
-                    TryInsertCell(tilemap, cellPoint);
+                    if (!isInSourceSelectTexture)
+                    {
+                        TryInsertCell(tilemap, cellPoint);
+                    }
                 }
             }
             if (Event.current.type == EventType.MouseDrag)
             {
                 if (Event.current.button == 0)
                 {
-                    TryInsertCell(tilemap, cellPoint);
+                    if (!isInSourceSelectTexture)
+                    {
+                        TryInsertCell(tilemap, cellPoint);
+                    }
                 }
             }
 
