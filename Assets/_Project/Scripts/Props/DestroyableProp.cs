@@ -10,7 +10,7 @@ namespace Assets._Project.Scripts.Props
         public GameObject OnDestroyEffectPrefab;
         public float DestroyDelay = 0f;
 
-        void Start()
+        public virtual void Start()
         {
             GetComponent<Health>().OnDeath += OnDeath;
         }
@@ -28,10 +28,14 @@ namespace Assets._Project.Scripts.Props
             }
         }
 
-        private IEnumerator DelayedDestroy()
+        protected virtual IEnumerator DelayedDestroy()
         {
             yield return new WaitForSeconds(DestroyDelay);
+            Destroy();
+        }
 
+        protected void Destroy()
+        {
             if (OnDestroyEffectPrefab != null)
             {
                 Instantiate(OnDestroyEffectPrefab, transform.position, transform.rotation);

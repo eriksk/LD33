@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 3ba74e5efe5dc234a886aac891ec073b
-timeCreated: 1440246102
+timeCreated: 1440271235
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -41,6 +41,7 @@ TextureImporter:
     21300068: office_sprites_34
     21300070: mug_red
     21300072: mug_white
+    21300074: fire_ext
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -451,6 +452,16 @@ TextureImporter:
         serializedVersion: 2
         x: 384
         y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire_ext
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 448
         width: 32
         height: 32
       alignment: 0
