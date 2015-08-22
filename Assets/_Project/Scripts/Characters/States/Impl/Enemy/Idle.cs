@@ -89,12 +89,15 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Enemy
         {
             Animations.SetAnim("attack");
             Animations.OnAnimationEnd += OnAnimationEnd;
-            
-            Melee.DoAttack();
-            // TODO: on specific frame
-
+            Animations.OnFrameEnter += OnFrameEnter;
             Movement.Stop();
             base.OnEnter();
+        }
+
+        private void OnFrameEnter(int frameIndex, int frameValue)
+        {
+            if (frameIndex == 2)
+                Melee.DoAttack();
         }
 
         private void OnAnimationEnd()
@@ -105,6 +108,7 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Enemy
         public override void OnLeave()
         {
             Animations.OnAnimationEnd -= OnAnimationEnd;
+            Animations.OnFrameEnter -= OnFrameEnter;
             base.OnLeave();
         }
 

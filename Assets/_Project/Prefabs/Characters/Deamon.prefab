@@ -22,6 +22,7 @@ GameObject:
   - 114: {fileID: 11486914}
   - 114: {fileID: 11447996}
   - 114: {fileID: 11445328}
+  - 82: {fileID: 8245188}
   m_Layer: 10
   m_Name: Deamon
   m_TagString: Untagged
@@ -65,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.5780001, y: .569999993, z: 0}
+  m_LocalPosition: {x: 15.9460001, y: .657999992, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 449972}
@@ -157,6 +158,75 @@ BoxCollider2D:
   m_Offset: {x: -.000717282295, y: .300000012}
   serializedVersion: 2
   m_Size: {x: .180217594, y: .412608355}
+--- !u!82 &8245188
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108266}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 50
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!114 &11441140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -219,7 +289,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   Damage: 1
-  Sound: {fileID: 0}
+  Sound: {fileID: 8300000, guid: 8d548bef0b5bfe54898c2a97d268f681, type: 3}
   ShowDebug: 1
 --- !u!114 &11447996
 MonoBehaviour:

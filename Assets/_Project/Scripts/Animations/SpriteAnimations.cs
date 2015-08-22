@@ -16,6 +16,9 @@ namespace Assets._Project.Scripts.Animations
         public delegate void AnimationEnd();
         public event AnimationEnd OnAnimationEnd;
 
+        public delegate void FrameEnter(int frameIndex, int frameValue);
+        public event FrameEnter OnFrameEnter;
+
         public void SetAnim(string name)
         {
             if(_currentAnimation != null && _currentAnimation.Name == name)
@@ -35,10 +38,18 @@ namespace Assets._Project.Scripts.Animations
             if (_currentAnimation == null)
                 return;
 
-            if (_currentAnimation.Update())
+            var frameUpdateResult = _currentAnimation.Update();
+            if (frameUpdateResult.AnimationEnded)
             {
                 if (OnAnimationEnd != null)
                     OnAnimationEnd();
+            }
+            if (frameUpdateResult.EnteredNewFrame)
+            {
+                if (OnFrameEnter != null)
+                {
+                    OnFrameEnter(_currentAnimation.FrameIndex, _currentAnimation.Frame);
+                }
             }
 
             ApplyAnimationToRenderer();
@@ -75,9 +86,16 @@ namespace Assets._Project.Scripts.Animations
         private float _current;
         private int _currentFrame;
 
+        private FrameUpdateResult _result = new FrameUpdateResult();
+
         public int Frame
         {
             get { return Frames[_currentFrame]; }
+        }
+
+        public int FrameIndex
+        {
+            get { return _currentFrame; }
         }
 
         public void Reset()
@@ -86,23 +104,37 @@ namespace Assets._Project.Scripts.Animations
             _currentFrame = 0;
         }
 
-        public bool Update()
+        public FrameUpdateResult Update()
         {
+            _result.EnteredNewFrame = false;
+            _result.AnimationEnded = false;
+
             _current += Time.deltaTime*1000f;
-            if (!(_current >= Interval)) return false;
+            if (!(_current >= Interval))
+                return _result;
 
             _current = 0f;
             _currentFrame++;
+            _result.EnteredNewFrame = true;
 
-            if (_currentFrame <= Frames.Length - 1) return false;
+            if (_currentFrame <= Frames.Length - 1)
+                return _result;
+
+            _result.AnimationEnded = true;
 
             Reset();
-            return true;
+            return _result;
         }
 
         public override string ToString()
         {
             return Name + "what";
         }
+    }
+
+    public class FrameUpdateResult
+    {
+        public bool AnimationEnded;
+        public bool EnteredNewFrame;
     }
 }
