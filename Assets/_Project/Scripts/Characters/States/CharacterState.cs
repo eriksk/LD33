@@ -51,6 +51,11 @@ namespace Assets._Project.Scripts.Characters.States
             get { return Machine.gameObject.GetComponent<CharacterFlip>(); }
         }
 
+        protected Melee Melee
+        {
+            get { return Machine.gameObject.GetComponent<Melee>(); }
+        }
+
         public virtual void OnEnter()
         {
         }

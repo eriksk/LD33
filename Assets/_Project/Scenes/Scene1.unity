@@ -1172,7 +1172,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 473360, guid: 8cf2c0e4890add242bb0bf9a1cc959f4, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 108266, guid: 8cf2c0e4890add242bb0bf9a1cc959f4, type: 2}
       propertyPath: m_Name
@@ -4307,15 +4307,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 473360, guid: 8cf2c0e4890add242bb0bf9a1cc959f4, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 108266, guid: 8cf2c0e4890add242bb0bf9a1cc959f4, type: 2}
       propertyPath: m_Name
       value: Deamon (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441140, guid: 8cf2c0e4890add242bb0bf9a1cc959f4, type: 2}
-      propertyPath: Down
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8cf2c0e4890add242bb0bf9a1cc959f4, type: 2}
@@ -8195,8 +8191,8 @@ Transform:
   - {fileID: 630167952}
   - {fileID: 1127618271}
   - {fileID: 1811721700}
-  - {fileID: 256890850}
   - {fileID: 95475836}
+  - {fileID: 256890850}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!1 &1742788394

@@ -21,6 +21,7 @@ GameObject:
   - 114: {fileID: 11485492}
   - 114: {fileID: 11486914}
   - 114: {fileID: 11447996}
+  - 114: {fileID: 11445328}
   m_Layer: 10
   m_Name: Deamon
   m_TagString: Untagged
@@ -183,7 +184,7 @@ MonoBehaviour:
   DownOffset: 0
   DownDistance: .0700000003
   HorizontalOffset: .0900000036
-  HorizontalDistance: .129999995
+  HorizontalDistance: .25999999
   Height: .5
   DrawDebug: 1
 --- !u!114 &11441600
@@ -201,6 +202,25 @@ MonoBehaviour:
   MaxSpeed: 1.49000001
   JumpForce: 10
   HorizontalDamping: 0
+--- !u!114 &11445328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d024e68285bb2b47955c04ad978ca7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: {x: 0, y: 0}
+  Reach: .25
+  HitMask:
+    serializedVersion: 2
+    m_Bits: 256
+  Damage: 1
+  Sound: {fileID: 0}
+  ShowDebug: 1
 --- !u!114 &11447996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -248,6 +268,9 @@ MonoBehaviour:
   - Name: jump
     Frames: 10000000
     Interval: 100
+  - Name: attack
+    Frames: 18000000190000001a0000001b000000
+    Interval: 100
 --- !u!114 &11478688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -271,6 +294,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002d18c012d809a488b254ee5aad0782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SeeDistance: 2
+  SeeMask:
+    serializedVersion: 2
+    m_Bits: 257
+  DrawDebug: 0
+  NearPlayerTreshold: .239999995
 --- !u!114 &11486914
 MonoBehaviour:
   m_ObjectHideFlags: 1

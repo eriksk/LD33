@@ -22,9 +22,10 @@ namespace Assets._Project.Scripts.Characters.States
                 case CharacterStateMachineType.Deamon:
                     return new CharacterState[]
                     {
-                        new Impl.Player.Idle(),
-                        new Impl.Player.Walk(),
-                        new Impl.Player.Jump()
+                        new Impl.Enemy.Idle(),
+                        new Impl.Enemy.Walk(),
+                        new Impl.Enemy.Jump(),
+                        new Impl.Enemy.Attack()
                     };
             }
             

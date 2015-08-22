@@ -42,6 +42,11 @@ namespace Assets._Project.Scripts.Characters
             get { return !Alive; }
         }
 
+        public int Value
+        {
+            get { return _health; }
+        }
+
         public void Deal(int damage)
         {
             _health -= damage;

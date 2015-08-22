@@ -13,6 +13,9 @@ namespace Assets._Project.Scripts.Animations
         private SpriteAnimation _currentAnimation;
         private int _oldFrame;
 
+        public delegate void AnimationEnd();
+        public event AnimationEnd OnAnimationEnd;
+
         public void SetAnim(string name)
         {
             if(_currentAnimation != null && _currentAnimation.Name == name)
@@ -32,7 +35,12 @@ namespace Assets._Project.Scripts.Animations
             if (_currentAnimation == null)
                 return;
 
-            _currentAnimation.Update();
+            if (_currentAnimation.Update())
+            {
+                if (OnAnimationEnd != null)
+                    OnAnimationEnd();
+            }
+
             ApplyAnimationToRenderer();
         }
 
@@ -78,17 +86,18 @@ namespace Assets._Project.Scripts.Animations
             _currentFrame = 0;
         }
 
-        public void Update()
+        public bool Update()
         {
             _current += Time.deltaTime*1000f;
-            if (!(_current >= Interval)) return;
+            if (!(_current >= Interval)) return false;
 
             _current = 0f;
             _currentFrame++;
 
-            if (_currentFrame <= Frames.Length - 1) return;
+            if (_currentFrame <= Frames.Length - 1) return false;
 
             Reset();
+            return true;
         }
 
         public override string ToString()

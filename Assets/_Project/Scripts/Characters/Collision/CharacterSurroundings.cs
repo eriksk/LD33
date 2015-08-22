@@ -40,6 +40,12 @@ namespace Assets._Project.Scripts.Characters.Collision
             Right = RightUpper || RightMiddle || RightLower;
         }
 
+
+        public Vector3 GetMiddleAsVector3()
+        {
+            return new Vector3(0f, Height * 0.5f);
+        }
+
         private bool RayCast(Vector2 offset, Vector2 direction, float distance = 1f)
         {
             var position = transform.position + new Vector3(offset.x, offset.y, 0f);
