@@ -11710,6 +11710,56 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!1001 &1824646814
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1906040640}
+    m_Modifications:
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 27.6009998
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.81500006
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 122734, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+      propertyPath: m_Name
+      value: coffee_mug (14)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1824646815 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
+  m_PrefabInternal: {fileID: 1824646814}
 --- !u!43 &1827781704
 Mesh:
   m_ObjectHideFlags: 0
@@ -12355,6 +12405,7 @@ Transform:
   - {fileID: 978147140}
   - {fileID: 969308834}
   - {fileID: 1633665518}
+  - {fileID: 1824646815}
   m_Father: {fileID: 1414239222}
   m_RootOrder: 5
 --- !u!1 &1906069240
