@@ -10,7 +10,6 @@ namespace Assets.Editor.CustomInspectors
     [CustomEditor(typeof(TileMap))]
     public class TileMapInspector : UnityEditor.Editor
     {
-        private float _treshold = 0.4f;
         private bool _editing = false;
         private int _selectedStampCell = 0;
 
