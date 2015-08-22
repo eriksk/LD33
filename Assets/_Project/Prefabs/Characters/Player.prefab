@@ -19,6 +19,7 @@ GameObject:
   - 114: {fileID: 11443432}
   - 114: {fileID: 11456816}
   - 114: {fileID: 11418034}
+  - 114: {fileID: 11443022}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -232,6 +233,22 @@ MonoBehaviour:
   Down: 0
   Jump: 0
   FirePrimary: 0
+--- !u!114 &11443022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 991d3e41a2c7042489091aae5454ae9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 152614, guid: ff2fb414b136dad43a6c4c160d983420, type: 2}
+  MuzzleOffset: {x: .370000005, y: -.25}
+  Force: 15
+  RecoilForce: .5
+  Interval: 100
 --- !u!114 &11443432
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -2,7 +2,7 @@ using Assets._Project.Scripts.Animations;
 using Assets._Project.Scripts.Characters.Collision;
 using Assets._Project.Scripts.Characters.Input;
 using Assets._Project.Scripts.Characters.Movement;
-//using Assets._Project.Scripts.Weapons;
+using Assets._Project.Scripts.Weapons;
 using UnityEngine;
 
 namespace Assets._Project.Scripts.Characters.States
@@ -41,10 +41,10 @@ namespace Assets._Project.Scripts.Characters.States
             get { return Machine.gameObject.GetComponent<SpriteAnimations>(); }
         }
 
-        //protected Weapon Weapon
-        //{
-        //    get { return Machine.gameObject.GetComponent<Weapon>(); }
-        //}
+        protected Weapon Weapon
+        {
+            get { return Machine.gameObject.GetComponent<Weapon>(); }
+        }
 
         protected CharacterFlip Flip
         {

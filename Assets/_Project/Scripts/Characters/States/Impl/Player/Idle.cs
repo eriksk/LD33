@@ -18,7 +18,7 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Player
         {
             if (Input.FirePrimary)
             {
-                //Weapon.Fire(Mathf.Deg2Rad * (Flip.Flipped ? 180f : 0f));
+                Weapon.Fire(Mathf.Deg2Rad * (Flip.Flipped ? 180f : 0f));
             }
 
             if (Input.Left || Input.Right)
@@ -54,7 +54,7 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Player
 
             if (Input.FirePrimary)
             {
-                //Weapon.Fire(Mathf.Deg2Rad * (Flip.Flipped ? 180f : 0f));
+                Weapon.Fire(Mathf.Deg2Rad * (Flip.Flipped ? 180f : 0f));
             }
 
 
@@ -99,7 +99,7 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Player
 
             if (Input.FirePrimary)
             {
-                //Weapon.Fire(Mathf.Deg2Rad * (Flip.Flipped ? 180f : 0f));
+                Weapon.Fire(Mathf.Deg2Rad * (Flip.Flipped ? 180f : 0f));
             }
 
             if (Input.Left)
