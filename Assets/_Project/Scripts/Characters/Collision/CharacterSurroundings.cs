@@ -10,6 +10,8 @@ namespace Assets._Project.Scripts.Characters.Collision
     public class CharacterSurroundings : MonoBehaviour
     {
         public bool Left, Right, Up, Down;
+        public bool LeftUpper, LeftLower, LeftMiddle;
+        public bool RightUpper, RightLower, RightMiddle;
         public LayerMask LayerMask;
 
         public float DownOffset;
@@ -17,15 +19,25 @@ namespace Assets._Project.Scripts.Characters.Collision
 
         public float HorizontalOffset = 0f;
         public float HorizontalDistance = 1f;
+        public float Height = 1f;
 
         public bool DrawDebug = false;
 
         void Update()
         {
-            Left = RayCast(new Vector2(-HorizontalOffset, 0f), Vector2.left, HorizontalDistance * transform.localScale.x);
-            Right = RayCast(new Vector2(HorizontalOffset, 0f), Vector2.right, HorizontalDistance * transform.localScale.x);
+            LeftUpper = RayCast(new Vector2(-HorizontalOffset, Height), Vector2.left, HorizontalDistance * transform.localScale.x);
+            RightUpper = RayCast(new Vector2(HorizontalOffset, Height), Vector2.right, HorizontalDistance * transform.localScale.x);
+
+            LeftMiddle = RayCast(new Vector2(-HorizontalOffset, Height * 0.5f), Vector2.left, HorizontalDistance * transform.localScale.x);
+            RightMiddle = RayCast(new Vector2(HorizontalOffset, Height * 0.5f), Vector2.right, HorizontalDistance * transform.localScale.x);
+
+            LeftLower = RayCast(new Vector2(-HorizontalOffset, 0f), Vector2.left, HorizontalDistance * transform.localScale.x);
+            RightLower = RayCast(new Vector2(HorizontalOffset, 0f), Vector2.right, HorizontalDistance * transform.localScale.x);
 
             Down = RayCast(new Vector2(0f, DownOffset * transform.localScale.x), Vector2.down, DownDistance * transform.localScale.y);
+
+            Left = LeftUpper || LeftMiddle || LeftLower;
+            Right = RightUpper || RightMiddle || RightLower;
         }
 
         private bool RayCast(Vector2 offset, Vector2 direction, float distance = 1f)

@@ -27,12 +27,12 @@ namespace Assets._Project.Scripts.Bullets
             Destroy(gameObject);
         }
 
-        void OnCollision2D(Collision2D coll)
+        void OnCollisionEnter2D(Collision2D coll)
         {
-            HandleHit(coll.gameObject);
+            HandleHit(coll.collider.gameObject);
 
             if (OnCollisionPrefab != null)
-                Instantiate(OnCollisionPrefab, coll.contacts[0].point, transform.rotation);
+                Instantiate(OnCollisionPrefab, new Vector3(coll.contacts[0].point.x, coll.contacts[0].point.y, transform.position.z), transform.rotation);
             Destroy(gameObject);
         }
 

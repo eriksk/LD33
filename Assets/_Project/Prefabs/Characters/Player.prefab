@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.3100004, y: 2.55999994, z: 0}
+  m_LocalPosition: {x: 10.3149996, y: 1.97599995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 466126}
@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: .5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 465366}
@@ -129,7 +129,7 @@ CircleCollider2D:
   m_Material: {fileID: 6200000, guid: 1a33af799f4df5e4491940e01fce8b8c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -.400000006}
+  m_Offset: {x: 0, y: .5}
   serializedVersion: 2
   m_Radius: .100000001
 --- !u!58 &5813612
@@ -142,7 +142,7 @@ CircleCollider2D:
   m_Material: {fileID: 6200000, guid: 1a33af799f4df5e4491940e01fce8b8c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: .100000001}
   serializedVersion: 2
   m_Radius: .100000001
 --- !u!61 &6134678
@@ -155,7 +155,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 1a33af799f4df5e4491940e01fce8b8c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.000717282295, y: -.204260841}
+  m_Offset: {x: -.000717282295, y: .300000012}
   serializedVersion: 2
   m_Size: {x: .180217594, y: .412608355}
 --- !u!82 &8234082
@@ -280,14 +280,21 @@ MonoBehaviour:
   Left: 0
   Right: 0
   Up: 0
-  Down: 0
+  Down: 1
+  LeftUpper: 0
+  LeftLower: 0
+  LeftMiddle: 0
+  RightUpper: 0
+  RightLower: 0
+  RightMiddle: 0
   LayerMask:
     serializedVersion: 2
-    m_Bits: 1
-  DownOffset: -.5
+    m_Bits: 1025
+  DownOffset: 0
   DownDistance: .0700000003
   HorizontalOffset: .150000006
   HorizontalDistance: .0500000007
+  Height: .5
   DrawDebug: 1
 --- !u!114 &11423238
 MonoBehaviour:
@@ -342,7 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 152614, guid: ff2fb414b136dad43a6c4c160d983420, type: 2}
-  MuzzleOffset: {x: .100000001, y: -.25}
+  MuzzleOffset: {x: .100000001, y: .25}
   Force: 15
   RecoilForce: .5
   FireSound: {fileID: 8300000, guid: 8282905e61c6b7c4fb3ba6a7713ff516, type: 3}
