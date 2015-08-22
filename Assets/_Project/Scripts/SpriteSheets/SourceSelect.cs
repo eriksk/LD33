@@ -13,18 +13,23 @@ namespace Assets._Project.Scripts.SpriteSheets
 
         void Start()
         {
+            Refresh();
+        }
+
+        public void Refresh()
+        {
             var renderer = GetComponent<Renderer>();
             if (renderer == null)
                 return;
 
-            var sheet = new SpriteSheet(renderer.material, 32);
+            var sheet = new SpriteSheet(renderer.sharedMaterial, 32);
             var cell = sheet.GetCellFromIndex(Index);
             var uv = sheet.GetUvCoordsForCell(cell);
 
-            renderer.material.SetTextureScale("_MainTex", new Vector2(sheet.UnitCoordSize, sheet.UnitCoordSize));
-            renderer.material.SetTextureScale("_BumpMap", new Vector2(sheet.UnitCoordSize, sheet.UnitCoordSize));
-            renderer.material.SetTextureOffset("_MainTex", uv);
-            renderer.material.SetTextureOffset("_BumpMap", uv);
+            renderer.sharedMaterial.SetTextureScale("_MainTex", new Vector2(sheet.UnitCoordSize, sheet.UnitCoordSize));
+            renderer.sharedMaterial.SetTextureScale("_BumpMap", new Vector2(sheet.UnitCoordSize, sheet.UnitCoordSize));
+            renderer.sharedMaterial.SetTextureOffset("_MainTex", uv);
+            renderer.sharedMaterial.SetTextureOffset("_BumpMap", uv);
         }
     }
 }
