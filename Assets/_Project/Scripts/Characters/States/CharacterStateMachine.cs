@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Assets._Project.Scripts.Characters.Collision;
 using Assets._Project.Scripts.Characters.Input;
 using Assets._Project.Scripts.Characters.Movement;
@@ -29,10 +30,17 @@ namespace Assets._Project.Scripts.Characters.States
 
         public void Set<TState>() where TState : CharacterState
         {
-            var state = _states.First(x => x is TState);
-            _current.OnLeave();
-            _current = state;
-            _current.OnEnter();
+            try
+            {
+                var state = _states.First(x => x is TState);
+                _current.OnLeave();
+                _current = state;
+                _current.OnEnter();
+            }
+            catch (Exception ex)
+            {
+                Debug.Log(ex);
+            }
         }
 
         void Update()

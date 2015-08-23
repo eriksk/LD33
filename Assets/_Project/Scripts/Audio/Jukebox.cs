@@ -21,7 +21,7 @@ namespace Assets._Project.Scripts.Audio
             if (source == null)
                 return;
 
-            if (!source.isPlaying)
+            if (source.enabled && !source.isPlaying)
                 source.Play();
         }
 

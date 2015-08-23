@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.41599989, y: .368000001, z: 0}
+  m_LocalPosition: {x: 4.71999979, y: -1.44000006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 484908}
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfb6d17f65148544945fc38ee54b689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Initial: 1
+  Initial: 3
 --- !u!114 &11436978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Acceleration: 5
-  MaxSpeed: 1.49000001
+  MaxSpeed: 2.5
   JumpForce: 10
   HorizontalDamping: 0
 --- !u!114 &11462702
@@ -296,7 +296,7 @@ MonoBehaviour:
     Interval: 100
   - Name: walk
     Frames: 08000000090000000a0000000b000000
-    Interval: 100
+    Interval: 60
   - Name: jump
     Frames: 10000000
     Interval: 100
@@ -351,7 +351,7 @@ MonoBehaviour:
   Left: 0
   Right: 0
   Up: 0
-  Down: 0
+  Down: 1
   LeftUpper: 0
   LeftLower: 0
   LeftMiddle: 0
