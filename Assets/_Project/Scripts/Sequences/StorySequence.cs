@@ -36,15 +36,19 @@ namespace Assets._Project.Scripts.Sequences
 
             foreach (var textSequence in Texts)
             {
-                PlaySound(BoatHornClip);
                 var typeWriter = new TypeWriter(textSequence.Text, 80f);
+
+                if (!_skipRequested)
+                {
+                    PlaySound(BoatHornClip);
+                }
+                _skipRequested = false;
 
                 while (!typeWriter.Done)
                 {
                     if (_skipRequested)
                     {
                         typeWriter.SkipToEnd();
-                        _skipRequested = false;
                         break;
                     }
 

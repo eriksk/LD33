@@ -52,6 +52,11 @@ namespace Assets._Project.Scripts.Characters.States
             get { return Machine.gameObject.GetComponent<Weapon>(); }
         }
 
+        protected GranadeLauncher GranadeLauncher
+        {
+            get { return Machine.gameObject.GetComponent<GranadeLauncher>(); }
+        }
+
         protected CharacterFlip Flip
         {
             get { return Machine.gameObject.GetComponent<CharacterFlip>(); }

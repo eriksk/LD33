@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Assets._Project.Scripts.Characters;
 using UnityEngine;
 
 namespace Assets._Project.Scripts.Weapons
 {
     [RequireComponent(typeof(CharacterFlip))]
-    public class Weapon : MonoBehaviour
+    public class GranadeLauncher : MonoBehaviour
     {
         public GameObject BulletPrefab;
         public Vector2 MuzzleOffset;
@@ -37,7 +33,7 @@ namespace Assets._Project.Scripts.Weapons
 
         void Update()
         {
-            _current += Time.deltaTime*1000f;
+            _current += Time.deltaTime * 1000f;
         }
 
         private void FireBullet(float angle)
@@ -58,7 +54,7 @@ namespace Assets._Project.Scripts.Weapons
             var pos = transform.position;
             pos.x += MuzzleOffset.x * transform.localScale.x * GetComponent<CharacterFlip>().FlippedAsUnit;
             pos.y += MuzzleOffset.y * transform.localScale.y;
-            
+
             var bullet = (GameObject)Instantiate(BulletPrefab, pos, Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg));
             var rigidBody = bullet.GetComponent<Rigidbody2D>();
             rigidBody.velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * Force;

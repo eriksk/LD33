@@ -6262,7 +6262,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
 --- !u!1 &981294550
 GameObject:
   m_ObjectHideFlags: 0
@@ -13756,6 +13756,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11498348, guid: 503b49a8a8c8b414e801f699ca4b0e4d, type: 2}
+      propertyPath: FireSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8282905e61c6b7c4fb3ba6a7713ff516, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503b49a8a8c8b414e801f699ca4b0e4d, type: 2}
   m_IsPrefabParent: 0

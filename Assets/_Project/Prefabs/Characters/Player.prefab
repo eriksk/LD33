@@ -23,6 +23,7 @@ GameObject:
   - 114: {fileID: 11436024}
   - 114: {fileID: 11416050}
   - 82: {fileID: 8234082}
+  - 114: {fileID: 11498348}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -54,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.72753429, y: -1.46530461, z: 0}
+  m_LocalPosition: {x: 1.73000002, y: .0700000003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 466126}
@@ -403,13 +404,34 @@ MonoBehaviour:
   - Name: jump
     Frames: 10000000
     Interval: 100
+--- !u!114 &11498348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a62525c4706de45ae431e2f09402df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 139194, guid: 83da2d9406bbc83409708088c083e740, type: 2}
+  MuzzleOffset: {x: .100000001, y: .25}
+  Force: 10
+  RecoilForce: .5
+  FireSound: {fileID: 8300000, guid: aeef5908abad130479289bc06c776756, type: 3}
+  Interval: 3000
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: FireSound
+      value: 
+      objectReference: {fileID: 8300000, guid: aeef5908abad130479289bc06c776756, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 136076}

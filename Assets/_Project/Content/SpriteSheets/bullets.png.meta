@@ -1,11 +1,12 @@
 fileFormatVersion: 2
 guid: 1ada9a10608b25b4ea2fcea0b3044e6e
-timeCreated: 1440330659
+timeCreated: 1440343858
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: bullets_0
     21300002: bullets_1
+    21300004: granade
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -59,7 +60,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bullets_1
       rect:
@@ -69,7 +70,17 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: granade
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
