@@ -331,12 +331,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002d18c012d809a488b254ee5aad0782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeeDistance: 2
+  SeeDistance: 4
   SeeMask:
     serializedVersion: 2
     m_Bits: 257
   DrawDebug: 0
-  NearPlayerTreshold: .239999995
+  NearPlayerTreshold: 2
 --- !u!114 &11469834
 MonoBehaviour:
   m_ObjectHideFlags: 1

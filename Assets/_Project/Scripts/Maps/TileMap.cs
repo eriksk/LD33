@@ -1,5 +1,7 @@
-﻿using Assets._Project.Scripts.SpriteSheets;
+﻿using System;
+using Assets._Project.Scripts.SpriteSheets;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Assets._Project.Scripts.Maps
 {
@@ -19,9 +21,21 @@ namespace Assets._Project.Scripts.Maps
 
         public bool Dirty { get; set; }
 
+        private int _oldWidth;
+        private int _oldHeight;
+
         public TileMap()
         {
             _data = new int[Width * Height];
+        }
+
+        public void SetSize(int w, int h)
+        {
+            _oldWidth = Width;
+            _oldHeight = Height;
+            Width = w;
+            Height = h;
+            Dirty = true;
         }
 
         public void GenerateMesh()
@@ -35,7 +49,23 @@ namespace Assets._Project.Scripts.Maps
             if (Dirty)
             {
                 // TODO: copy current data, lose if less size
+                var temp = new int[Width*Height];
+                Array.Copy(_data, temp, _data.Length);
                 _data = new int[Width * Height];
+                for (int i = 0; i < _oldWidth; i++)
+                {
+                    for (int j = 0; j < _oldHeight; j++)
+                    {
+                        if (i < Width && j < Width)
+                        {
+                            _data[i + j * Width] = temp[i + j*_oldWidth];
+                        }
+                        else
+                        {
+                            _data[i + j*Width] = -1;
+                        }
+                    }
+                }
                 Dirty = false;
             }
         }

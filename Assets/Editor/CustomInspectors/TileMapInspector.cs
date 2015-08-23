@@ -23,9 +23,7 @@ namespace Assets.Editor.CustomInspectors
 
             if (width != tilemap.Width || height != tilemap.Height)
             {
-                tilemap.Width = width;
-                tilemap.Height = height;
-                tilemap.Dirty = true;
+                tilemap.SetSize(width, height);
             }
 
             if (GUILayout.Button(_editing ? "Done Editing" : "Edit"))
