@@ -20,6 +20,8 @@ namespace Assets._Project.Scripts.Sequences
         public AudioClip AudioExecution;
         public AudioClip AudioOfficer;
 
+        public string GoToLevel = "";
+
         void Start()
         {
             if (Header == null)
@@ -76,6 +78,13 @@ namespace Assets._Project.Scripts.Sequences
                     SubHeader.text = subHeaderTypeWriter.CurrentText;
                 }
                 yield return new WaitForEndOfFrame();
+            }
+
+            yield return new WaitForSeconds(1f);
+
+            if (!string.IsNullOrEmpty(GoToLevel))
+            {
+                Application.LoadLevel(GoToLevel);
             }
         }
 

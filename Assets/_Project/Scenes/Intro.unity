@@ -123,6 +123,7 @@ MonoBehaviour:
   AudioChief: {fileID: 8300000, guid: eb5198af6c1cf3240987ee1b1fcf4ee0, type: 3}
   AudioExecution: {fileID: 8300000, guid: c62c462653a61514f836a6b190a8680b, type: 3}
   AudioOfficer: {fileID: 8300000, guid: 0b0e25a5c7179c84797d4017e16a905e, type: 3}
+  GoToLevel: StoryIntro
 --- !u!4 &39433168
 Transform:
   m_ObjectHideFlags: 0
