@@ -50,7 +50,7 @@ namespace Assets._Project.Scripts.Maps
             {
                 // TODO: copy current data, lose if less size
                 var temp = new int[Width*Height];
-                Array.Copy(_data, temp, _data.Length);
+                Array.Copy(_data, temp, Math.Min(temp.Length, _data.Length));
                 _data = new int[Width * Height];
                 for (int i = 0; i < _oldWidth; i++)
                 {
