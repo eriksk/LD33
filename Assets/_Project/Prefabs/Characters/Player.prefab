@@ -201,7 +201,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -240,6 +240,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletHitEffectPrefab: {fileID: 0}
   OnDeathEffectPrefab: {fileID: 134672, guid: 2f4c9800ad9d8f24daa4abe127bc6017, type: 2}
+  AudioCollection:
+    Entries:
+    - Clips:
+      - {fileID: 8300000, guid: cf4f671fa63c8da4eb66bb4778f1041a, type: 3}
+      - {fileID: 8300000, guid: 457596a24ea61d54e9c23968b13a1480, type: 3}
+      - {fileID: 8300000, guid: 01a320a0c1c39a044824de29476be4c9, type: 3}
+      Name: jump
+    - Clips:
+      - {fileID: 8300000, guid: f7c44321af6f93d45a4bdd1e29959e92, type: 3}
+      Name: step_left
+    - Clips:
+      - {fileID: 8300000, guid: 792b7a3c3ea7da34fab11dc2ead339f6, type: 3}
+      Name: step_right
 --- !u!114 &11418034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -384,7 +397,7 @@ MonoBehaviour:
     Interval: 100
   - Name: walk
     Frames: 08000000090000000a0000000b0000000c0000000d000000
-    Interval: 100
+    Interval: 60
   - Name: jump
     Frames: 10000000
     Interval: 100

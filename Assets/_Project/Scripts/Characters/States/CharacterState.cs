@@ -1,4 +1,5 @@
 using Assets._Project.Scripts.Animations;
+using Assets._Project.Scripts.Audio;
 using Assets._Project.Scripts.Characters.Collision;
 using Assets._Project.Scripts.Characters.Input;
 using Assets._Project.Scripts.Characters.Movement;
@@ -54,6 +55,16 @@ namespace Assets._Project.Scripts.Characters.States
         protected Melee Melee
         {
             get { return Machine.gameObject.GetComponent<Melee>(); }
+        }
+
+        protected AudioCollection AudioCollection
+        {
+            get { return Machine.gameObject.GetComponent<CharacterDefinition>().AudioCollection; }
+        }
+
+        protected void PlaySound(AudioClip clip)
+        {
+            Machine.gameObject.GetComponent<AudioSource>().PlayOneShot(clip);
         }
 
         public virtual void OnEnter()

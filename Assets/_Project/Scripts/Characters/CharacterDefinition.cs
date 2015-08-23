@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Assets._Project.Scripts.Audio;
 using Assets._Project.Scripts.Characters.Control;
 using Assets._Project.Scripts.Characters.Input;
 using Assets._Project.Scripts.Characters.InputControl;
@@ -14,6 +15,8 @@ namespace Assets._Project.Scripts.Characters
     {
         public GameObject BulletHitEffectPrefab;
         public GameObject OnDeathEffectPrefab;
+
+        public AudioCollection AudioCollection = new AudioCollection();
 
         void Start()
         {

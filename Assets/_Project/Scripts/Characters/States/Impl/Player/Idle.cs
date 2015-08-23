@@ -46,7 +46,26 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Player
         public override void OnEnter()
         {
             Animations.SetAnim("walk");
+            Animations.OnFrameEnter += AnimationsOnOnFrameEnter;
             base.OnEnter();
+        }
+
+        private void AnimationsOnOnFrameEnter(int frameIndex, int frameValue)
+        {
+            if (frameIndex == 0)
+            {
+                PlaySound(AudioCollection.Get("step_left"));
+            }
+            if (frameIndex == 3)
+            {
+                PlaySound(AudioCollection.Get("step_right"));
+            }
+        }
+
+        public override void OnLeave()
+        {
+            Animations.OnFrameEnter -= AnimationsOnOnFrameEnter;
+            base.OnLeave();
         }
 
         public override void Update()
@@ -89,8 +108,10 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Player
     {
         public override void OnEnter()
         {
+            PlaySound(AudioCollection.Get("jump"));
             Animations.SetAnim("jump");
             Movement.Jump();
+            Debug.Log("Jump");
             base.OnEnter();
         }
 
