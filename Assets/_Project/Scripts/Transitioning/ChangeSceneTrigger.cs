@@ -11,6 +11,7 @@ namespace Assets._Project.Scripts.Transitioning
         private bool _trigged = false;
         public UnityEngine.UI.Text Text;
         public AudioClip LevelClearedClip;
+        public AudioClip LevelClearedSongClip;
 
         void Start()
         {
@@ -40,8 +41,9 @@ namespace Assets._Project.Scripts.Transitioning
                 player.GetComponent<CharacterDefinition>().DisableControl();
             }
 
+            GameObject.Find("Jukebox").GetComponent<AudioSource>().Stop();
 
-            GetComponent<AudioSource>().PlayOneShot(LevelClearedClip);
+            GetComponent<AudioSource>().PlayOneShot(LevelClearedSongClip);
             if (Text != null)
             {
                 var typewriter = new TypeWriter("Level cleared!", 60f);
@@ -54,6 +56,8 @@ namespace Assets._Project.Scripts.Transitioning
                     yield return new WaitForEndOfFrame();
                 }
             }
+
+            GetComponent<AudioSource>().PlayOneShot(LevelClearedClip);
 
             yield return new WaitForSeconds(2);
             Application.LoadLevel(TargetLevel);

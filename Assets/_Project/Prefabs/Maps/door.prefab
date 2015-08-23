@@ -181,9 +181,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5cc46f4e4adb14185e7dad63511087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetLevel: StoryOutro
+  TargetLevel: OutroScene
   Text: {fileID: 0}
   LevelClearedClip: {fileID: 8300000, guid: 149e603765ce95a4ba7702dc8ad748d6, type: 3}
+  LevelClearedSongClip: {fileID: 8300000, guid: ccaaa99e7c021e942bef726902ce5e88,
+    type: 3}
 --- !u!212 &21202486
 SpriteRenderer:
   m_ObjectHideFlags: 1

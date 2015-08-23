@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Assets._Project.Scripts.Cameras;
 using Assets._Project.Scripts.Characters;
 using Assets._Project.Scripts.Characters.Movement;
 using UnityEngine;
@@ -60,6 +61,13 @@ namespace Assets._Project.Scripts.Physics
                 }
 
             }
+
+            ShakeCamera();
+        }
+
+        private void ShakeCamera()
+        {
+            Camera.main.GetComponent<CamShake>().Shake(500f, Force);
         }
     }
 }

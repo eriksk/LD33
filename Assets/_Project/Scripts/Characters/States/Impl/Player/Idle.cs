@@ -111,7 +111,6 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Player
             PlaySound(AudioCollection.Get("jump"));
             Animations.SetAnim("jump");
             Movement.Jump();
-            Debug.Log("Jump");
             base.OnEnter();
         }
 
