@@ -10,7 +10,7 @@ namespace Assets._Project.Scripts.Characters.Control.Ai
     [RequireComponent(typeof(CharacterInput))]
     [RequireComponent(typeof(CharacterSurroundings))]
     [RequireComponent(typeof(CharacterFlip))]
-    public class CharacterAiController : MonoBehaviour
+    public class CharacterAiController : CharacterInputController
     {
         private AiState _state = AiState.Idle;
         private readonly TimerTrig _timer = new TimerTrig(100f);

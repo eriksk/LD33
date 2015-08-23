@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections;
 using Assets._Project.Scripts.Characters;
-using Assets._Project.Scripts.Characters.Input;
-using Assets._Project.Scripts.Characters.InputControl;
-using Assets._Project.Scripts.Characters.Movement;
-using Assets._Project.Scripts.Characters.States;
 using Assets._Project.Scripts.Text;
 using UnityEngine;
 
@@ -18,6 +10,7 @@ namespace Assets._Project.Scripts.Transitioning
         public string TargetLevel;
         private bool _trigged = false;
         public UnityEngine.UI.Text Text;
+        public AudioClip LevelClearedClip;
 
         void Start()
         {
@@ -47,9 +40,11 @@ namespace Assets._Project.Scripts.Transitioning
                 player.GetComponent<CharacterDefinition>().DisableControl();
             }
 
+
+            GetComponent<AudioSource>().PlayOneShot(LevelClearedClip);
             if (Text != null)
             {
-                var typewriter = new TypeWriter("Level cleared!", 100f);
+                var typewriter = new TypeWriter("Level cleared!", 60f);
                 while (!typewriter.Done)
                 {
                     if (typewriter.Update())

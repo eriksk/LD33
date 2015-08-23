@@ -1,10 +1,11 @@
-﻿using Assets._Project.Scripts.Characters.Input;
+﻿using Assets._Project.Scripts.Characters.Control;
+using Assets._Project.Scripts.Characters.Input;
 using UnityEngine;
 
 namespace Assets._Project.Scripts.Characters.InputControl
 {
     [RequireComponent(typeof(CharacterInput))]
-    public class PlayerInputController : MonoBehaviour
+    public class PlayerInputController : CharacterInputController
     {
         void Update()
         {
