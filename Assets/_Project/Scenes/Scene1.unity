@@ -1518,7 +1518,7 @@ Camera:
     height: 1
   near clip plane: .300000012
   far clip plane: 1000
-  field of view: 44
+  field of view: 35
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -5437,6 +5437,48 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!1001 &1141395014
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1731722833}
+    m_Modifications:
+    - target: {fileID: 411126, guid: c712886204b05f2468349b4b48612c74, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6.41599989
+      objectReference: {fileID: 0}
+    - target: {fileID: 411126, guid: c712886204b05f2468349b4b48612c74, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .368000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 411126, guid: c712886204b05f2468349b4b48612c74, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411126, guid: c712886204b05f2468349b4b48612c74, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411126, guid: c712886204b05f2468349b4b48612c74, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411126, guid: c712886204b05f2468349b4b48612c74, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411126, guid: c712886204b05f2468349b4b48612c74, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411126, guid: c712886204b05f2468349b4b48612c74, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c712886204b05f2468349b4b48612c74, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1157093914
 GameObject:
   m_ObjectHideFlags: 0
@@ -7423,6 +7465,10 @@ BoxCollider2D:
 Transform:
   m_PrefabParentObject: {fileID: 447806, guid: 011526d750eeee24ab54efd04de9a489, type: 2}
   m_PrefabInternal: {fileID: 1770662823}
+--- !u!4 &1640258646 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 411126, guid: c712886204b05f2468349b4b48612c74, type: 2}
+  m_PrefabInternal: {fileID: 1141395014}
 --- !u!1001 &1664391979
 Prefab:
   m_ObjectHideFlags: 0
@@ -7743,6 +7789,7 @@ Transform:
   - {fileID: 630167952}
   - {fileID: 1127618271}
   - {fileID: 256890850}
+  - {fileID: 1640258646}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!1 &1742788394

@@ -83,7 +83,12 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Enemy
         }
     }
 
-    public class Attack : CharacterState
+    public abstract class Attack : CharacterState
+    {
+    }
+
+
+    public class AttackMelee : CharacterState
     {
         public override void OnEnter()
         {
@@ -98,6 +103,43 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Enemy
         {
             if (frameIndex == 2)
                 Melee.DoAttack();
+        }
+
+        private void OnAnimationEnd()
+        {
+            Set<Idle>();
+        }
+
+        public override void OnLeave()
+        {
+            Animations.OnAnimationEnd -= OnAnimationEnd;
+            Animations.OnFrameEnter -= OnFrameEnter;
+            base.OnLeave();
+        }
+
+        public override void Update()
+        {
+            Movement.Stop();
+
+            base.Update();
+        }
+    }
+
+    public class AttackWeapon : Attack
+    {
+        public override void OnEnter()
+        {
+            Animations.SetAnim("attack");
+            Animations.OnAnimationEnd += OnAnimationEnd;
+            Animations.OnFrameEnter += OnFrameEnter;
+            Movement.Stop();
+            base.OnEnter();
+        }
+
+        private void OnFrameEnter(int frameIndex, int frameValue)
+        {
+            if (frameIndex == 3)
+                Weapon.Fire(Mathf.Deg2Rad * (Flip.FlippedAsUnit < 0f ? 180f : 0f));
         }
 
         private void OnAnimationEnd()

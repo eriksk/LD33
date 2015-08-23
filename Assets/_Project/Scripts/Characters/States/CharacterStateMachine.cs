@@ -29,7 +29,7 @@ namespace Assets._Project.Scripts.Characters.States
 
         public void Set<TState>() where TState : CharacterState
         {
-            var state = _states.First(x => x.GetType() == typeof (TState));
+            var state = _states.First(x => x is TState);
             _current.OnLeave();
             _current = state;
             _current.OnEnter();

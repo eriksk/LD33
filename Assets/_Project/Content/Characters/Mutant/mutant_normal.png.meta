@@ -1,25 +1,23 @@
 fileFormatVersion: 2
-guid: 1ada9a10608b25b4ea2fcea0b3044e6e
-timeCreated: 1440330659
+guid: ed3d17ba8de0cb042ade48573d3e1f7e
+timeCreated: 1440329793
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: bullets_0
-    21300002: bullets_1
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
-    linearTexture: 0
+    enableMipMap: 1
+    linearTexture: 1
     correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
-    convertToNormalMap: 0
-    externalNormalMap: 0
-    heightScale: .25
+    convertToNormalMap: 1
+    externalNormalMap: 1
+    heightScale: .0160000008
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -35,42 +33,22 @@ TextureImporter:
     aniso: 16
     mipBias: -1
     wrapMode: 1
-  nPOTScale: 0
+  nPOTScale: 1
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 0
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 64
-  alphaIsTransparency: 1
-  textureType: 8
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 0
+  textureType: 1
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: bullets_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 56
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullets_1
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 56
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+    sprites: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

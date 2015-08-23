@@ -25,7 +25,16 @@ namespace Assets._Project.Scripts.Characters.States
                         new Impl.Enemy.Idle(),
                         new Impl.Enemy.Walk(),
                         new Impl.Enemy.Jump(),
-                        new Impl.Enemy.Attack()
+                        new Impl.Enemy.AttackMelee(), 
+                    };
+
+                case CharacterStateMachineType.Mutant:
+                    return new CharacterState[]
+                    {
+                        new Impl.Enemy.Idle(),
+                        new Impl.Enemy.Walk(),
+                        new Impl.Enemy.Jump(),
+                        new Impl.Enemy.AttackWeapon()
                     };
             }
             
@@ -36,6 +45,7 @@ namespace Assets._Project.Scripts.Characters.States
     public enum CharacterStateMachineType
     {
         Player,
-        Deamon
+        Deamon,
+        Mutant
     }
 }
