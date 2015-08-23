@@ -22,13 +22,17 @@ namespace Assets._Project.Scripts.Weapons
 
         public void Fire(float angle)
         {
-            _current += Time.deltaTime*1000f;
             if (_current < Interval)
                 return;
             _current = 0f;
 
             FireBullet(angle);
             ApplyRecoil();
+        }
+
+        void Update()
+        {
+            _current += Time.deltaTime*1000f;
         }
 
         private void FireBullet(float angle)

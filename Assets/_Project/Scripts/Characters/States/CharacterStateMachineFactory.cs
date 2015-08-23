@@ -22,18 +22,18 @@ namespace Assets._Project.Scripts.Characters.States
                 case CharacterStateMachineType.Deamon:
                     return new CharacterState[]
                     {
-                        new Impl.Enemy.Idle(),
-                        new Impl.Enemy.Walk(),
-                        new Impl.Enemy.Jump(),
+                        new Impl.Enemy.Idle(typeof(Impl.Enemy.AttackMelee)),
+                        new Impl.Enemy.Walk(typeof(Impl.Enemy.AttackMelee)),
+                        new Impl.Enemy.Jump(typeof(Impl.Enemy.AttackMelee)),
                         new Impl.Enemy.AttackMelee(), 
                     };
 
                 case CharacterStateMachineType.Mutant:
                     return new CharacterState[]
                     {
-                        new Impl.Enemy.Idle(),
-                        new Impl.Enemy.Walk(),
-                        new Impl.Enemy.Jump(),
+                        new Impl.Enemy.Idle(typeof(Impl.Enemy.AttackWeapon)),
+                        new Impl.Enemy.Walk(typeof(Impl.Enemy.AttackWeapon)),
+                        new Impl.Enemy.Jump(typeof(Impl.Enemy.AttackWeapon)),
                         new Impl.Enemy.AttackWeapon()
                     };
             }

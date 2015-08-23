@@ -30,17 +30,18 @@ namespace Assets._Project.Scripts.Characters.States
 
         public void Set<TState>() where TState : CharacterState
         {
-            try
-            {
-                var state = _states.First(x => x is TState);
-                _current.OnLeave();
-                _current = state;
-                _current.OnEnter();
-            }
-            catch (Exception ex)
-            {
-                Debug.Log(ex);
-            }
+            var state = _states.First(x => x is TState);
+            _current.OnLeave();
+            _current = state;
+            _current.OnEnter();
+        }
+
+        public void Set(string name)
+        {
+            var state = _states.First(x => x.GetType().Name == name);
+            _current.OnLeave();
+            _current = state;
+            _current.OnEnter();
         }
 
         void Update()

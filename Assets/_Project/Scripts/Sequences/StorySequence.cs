@@ -23,7 +23,7 @@ namespace Assets._Project.Scripts.Sequences
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.A))
             {
                 _skipRequested = true;
             }

@@ -1,9 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Assets._Project.Scripts.Characters.States.Impl.Enemy
 {
     public class Idle : CharacterState
     {
+        private readonly Type _attackType;
+
+        public Idle(Type attackType)
+        {
+            _attackType = attackType;
+        }
+
         public override void OnEnter()
         {
             Animations.SetAnim("idle");
@@ -14,7 +22,7 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Enemy
         {
             if (Input.FirePrimary)
             {
-                Set<Attack>();
+                Set(_attackType);
                 return;
             }
 
@@ -40,6 +48,13 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Enemy
 
     public class Walk : CharacterState
     {
+        private readonly Type _attackType;
+
+        public Walk(Type attackType)
+        {
+            _attackType = attackType;
+        }
+
         public override void OnEnter()
         {
             Animations.SetAnim("walk");
@@ -51,7 +66,7 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Enemy
 
             if (Input.FirePrimary)
             {
-                Set<Attack>();
+                Set(_attackType);
                 return;
             }
 
@@ -164,6 +179,13 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Enemy
 
     public class Jump : CharacterState
     {
+        private Type _attackType;
+
+        public Jump(Type attackType)
+        {
+            _attackType = attackType;
+        }
+
         public override void OnEnter()
         {
             Animations.SetAnim("jump");
@@ -176,7 +198,7 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Enemy
 
             if (Input.FirePrimary)
             {
-                Set<Attack>();
+                Set(_attackType);
                 return;
             }
 

@@ -1,3 +1,4 @@
+using System;
 using Assets._Project.Scripts.Animations;
 using Assets._Project.Scripts.Audio;
 using Assets._Project.Scripts.Characters.Collision;
@@ -15,6 +16,10 @@ namespace Assets._Project.Scripts.Characters.States
         public void Set<TState>() where TState : CharacterState
         {
             Machine.Set<TState>();
+        }
+        public void Set(Type type) 
+        {
+            Machine.Set(type.Name);
         }
 
         protected GameObject GameObject

@@ -30,7 +30,7 @@ namespace Assets._Project.Scripts.Transitioning
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.A))
             {
                 _skipRequested = true;
             }
@@ -64,8 +64,12 @@ namespace Assets._Project.Scripts.Transitioning
                     yield return new WaitForEndOfFrame();
                 }
             }
-            if(!_skipRequested)
+            if (!_skipRequested)
                 yield return new WaitForSeconds(2);
+            else
+            {
+                yield return new WaitForSeconds(1);
+            }
 
             Application.LoadLevel(Application.loadedLevelName);
         }

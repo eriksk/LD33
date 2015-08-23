@@ -85,6 +85,7 @@ namespace Assets._Project.Scripts.Text
         public void SkipToEnd()
         {
             _current = _text.Length;
+            CurrentText = _length == 0 ? "" : _text.Substring(0, _length);
         }
     }
 }

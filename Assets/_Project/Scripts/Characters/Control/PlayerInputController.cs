@@ -19,8 +19,12 @@ namespace Assets._Project.Scripts.Characters.InputControl
                 input.Right = true;
             if (UnityEngine.Input.GetKey(KeyCode.UpArrow))
                 input.Jump = true;
-            if (UnityEngine.Input.GetKey(KeyCode.Space))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.A))
                 input.FirePrimary = true;
+            if (UnityEngine.Input.GetKeyDown(KeyCode.S))
+                input.FireSecondary = true;
+            if (UnityEngine.Input.GetKeyDown(KeyCode.D))
+                input.FireTertiary = true;
 
         }
     }

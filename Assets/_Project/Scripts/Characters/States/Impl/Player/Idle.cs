@@ -20,6 +20,10 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Player
             {
                 Weapon.Fire(Mathf.Deg2Rad * (Flip.Flipped ? 180f : 0f));
             }
+            if (Input.FireSecondary)
+            {
+                // TODO: throw granade
+            }
 
             if (Input.Left || Input.Right)
             {
@@ -75,6 +79,10 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Player
             {
                 Weapon.Fire(Mathf.Deg2Rad * (Flip.Flipped ? 180f : 0f));
             }
+            if (Input.FireSecondary)
+            {
+                // TODO: throw granade
+            }
 
 
             if (Input.Jump)
@@ -116,10 +124,13 @@ namespace Assets._Project.Scripts.Characters.States.Impl.Player
 
         public override void Update()
         {
-
             if (Input.FirePrimary)
             {
                 Weapon.Fire(Mathf.Deg2Rad * (Flip.Flipped ? 180f : 0f));
+            }
+            if (Input.FireSecondary)
+            {
+                // TODO: throw granade
             }
 
             if (Input.Left)

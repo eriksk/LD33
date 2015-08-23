@@ -311,7 +311,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: space:skip
+  m_Text: (A):skip
 --- !u!222 &1622549772
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -514,7 +514,7 @@ MonoBehaviour:
   - Text: '...'
   - Text: KILL EVERYTHING!
   BoatHornClip: {fileID: 8300000, guid: b4a6956210bb66847ac94555edaa6f45, type: 3}
-  GoToLevel: Scene1
+  GoToLevel: Level1
 --- !u!4 &2006695238
 Transform:
   m_ObjectHideFlags: 0
