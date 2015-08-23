@@ -28,7 +28,7 @@ GameObject:
   - 212: {fileID: 21202234}
   - 58: {fileID: 5842560}
   - 50: {fileID: 5027350}
-  - 114: {fileID: 11449674}
+  - 114: {fileID: 11485022}
   m_Layer: 13
   m_Name: blood_clot_4
   m_TagString: Untagged
@@ -43,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.9385395, y: -2.03578901, z: 0}
+  m_LocalPosition: {x: 5.30943441, y: -1.76696634, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 448392}
@@ -90,7 +90,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .0700000003
---- !u!114 &11449674
+--- !u!114 &11485022
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -98,10 +98,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 144838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d663a2f5fd8243e45b18d98d683d9c3a, type: 3}
+  m_Script: {fileID: 11500000, guid: b6dac3d619aa995458ee7450d8522c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Time: 2
+  ParticleSystem: {fileID: 19880806}
 --- !u!198 &19880806
 ParticleSystem:
   m_ObjectHideFlags: 1

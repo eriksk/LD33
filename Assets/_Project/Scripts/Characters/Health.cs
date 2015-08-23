@@ -13,10 +13,12 @@ namespace Assets._Project.Scripts.Characters
 
         public delegate void Death(GameObject gameObject);
         public event Death OnDeath;
+        private bool _firedOnDeath = false;
 
         void Start()
         {
             _health = Initial;
+            _firedOnDeath = false;
         }
 
         public float Unit
@@ -52,12 +54,16 @@ namespace Assets._Project.Scripts.Characters
             _health -= damage;
             Clamp();
 
-            if (Dead && OnDeath != null)
+            if (Dead && OnDeath != null && !_firedOnDeath)
+            {
+                _firedOnDeath = true;
                 OnDeath(gameObject);
+            }
         }
 
         public void Heal(int amount)
         {
+            _firedOnDeath = false;
             _health += amount;
             Clamp();
         }

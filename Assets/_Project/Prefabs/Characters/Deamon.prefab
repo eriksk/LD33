@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletHitEffectPrefab: {fileID: 0}
-  OnDeathEffectPrefab: {fileID: 0}
+  OnDeathEffectPrefab: {fileID: 145564, guid: 333edc27fbabc744b97a34ec8f3d1026, type: 2}
 --- !u!114 &11451358
 MonoBehaviour:
   m_ObjectHideFlags: 1

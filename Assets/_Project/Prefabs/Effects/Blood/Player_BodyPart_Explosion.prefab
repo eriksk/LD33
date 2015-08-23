@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &134672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 463640}
+  - 114: {fileID: 11400788}
+  - 114: {fileID: 11409632}
+  m_Layer: 0
+  m_Name: Player_BodyPart_Explosion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &463640
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134672}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.6674366, y: 2.94683504, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d663a2f5fd8243e45b18d98d683d9c3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Time: .100000001
+--- !u!114 &11409632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52cef51ac084b9e4d932c0faf9d7fe76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Objects:
+  - Obj: {fileID: 131452, guid: 3dc6f190b0b1ee141acae7e88c3e9ede, type: 2}
+    Count: 1
+  - Obj: {fileID: 116780, guid: 6a5a032494976c54e9c3e6c7941151ce, type: 2}
+    Count: 1
+  - Obj: {fileID: 174784, guid: 85e9f41b19f361b4ea3c44562c4ab34d, type: 2}
+    Count: 1
+  - Obj: {fileID: 149818, guid: b5309f5992b81c742805a71ff0390af5, type: 2}
+    Count: 1
+  - Obj: {fileID: 183256, guid: c7835f9eb246f9747bbbdf2d3e941f98, type: 2}
+    Count: 2
+  - Obj: {fileID: 157014, guid: c023936ede4e97748bf5b66f80faa6a2, type: 2}
+    Count: 3
+  Velocity: 20
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 134672}
+  m_IsPrefabParent: 1
