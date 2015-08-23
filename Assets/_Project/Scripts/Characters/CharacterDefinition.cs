@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Assets._Project.Scripts.Characters.Input;
+using Assets._Project.Scripts.Characters.InputControl;
 using UnityEngine;
 
 namespace Assets._Project.Scripts.Characters
@@ -48,6 +50,12 @@ namespace Assets._Project.Scripts.Characters
                 }
                 Destroy(gameObject);
             }
+        }
+
+        public void DisableControl()
+        {
+            GetComponent<CharacterInput>().Clear();
+            GetComponent<PlayerInputController>().enabled = false;
         }
     }
 }
