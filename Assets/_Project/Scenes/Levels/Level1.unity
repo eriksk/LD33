@@ -1165,25 +1165,25 @@ Transform:
   - {fileID: 513097479}
   - {fileID: 1075019457}
   - {fileID: 910513505}
-  - {fileID: 628003361}
-  - {fileID: 1030918372}
   - {fileID: 1969845939}
   - {fileID: 2094494892}
   - {fileID: 599287858}
   - {fileID: 2127859088}
-  - {fileID: 400668465}
   - {fileID: 1269989446}
   - {fileID: 1009525696}
   - {fileID: 1424567700}
   - {fileID: 1491278377}
   - {fileID: 2033289745}
   - {fileID: 1895882035}
+  - {fileID: 400668465}
   - {fileID: 2095253779}
+  - {fileID: 628003361}
   - {fileID: 102034659}
   - {fileID: 2134831331}
+  - {fileID: 1030918372}
   - {fileID: 503479690}
-  - {fileID: 122665051}
   - {fileID: 1618809970}
+  - {fileID: 122665051}
   - {fileID: 1251375272}
   - {fileID: 256836763}
   m_Father: {fileID: 0}
@@ -2250,6 +2250,10 @@ Prefab:
       propertyPath: Text
       value: 
       objectReference: {fileID: 1513896820}
+    - target: {fileID: 11451080, guid: 7999dbe1dee07d745ad959e6e93b4ad5, type: 2}
+      propertyPath: TargetLevel
+      value: Level2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7999dbe1dee07d745ad959e6e93b4ad5, type: 2}
   m_IsPrefabParent: 0
