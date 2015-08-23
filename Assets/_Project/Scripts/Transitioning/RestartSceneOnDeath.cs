@@ -64,12 +64,8 @@ namespace Assets._Project.Scripts.Transitioning
                     yield return new WaitForEndOfFrame();
                 }
             }
-            if (!_skipRequested)
-                yield return new WaitForSeconds(2);
-            else
-            {
-                yield return new WaitForSeconds(1);
-            }
+
+            yield return new WaitForSeconds(2);
 
             Application.LoadLevel(Application.loadedLevelName);
         }
